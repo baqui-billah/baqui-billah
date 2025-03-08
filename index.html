@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Md. Baqui Billah - Portfolio</title>
+  <!-- Google Fonts for sleek typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav .menu a {
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav .menu a:hover {
+      color: #555;
+    }
+    
+    /* Hero Section */
+    header {
+      position: relative;
+      background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 2;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    
+    /* Section Styles */
+    section {
+      padding: 60px 20px;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    /* About Section */
+    .about {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .portfolio-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      margin: 20px auto;
+      display: block;
+    }
+    
+    /* Experience & Education Sections */
+    .experience-item, .education-item {
+      margin-bottom: 30px;
+    }
+    .experience-item h3, .education-item h3 {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+    .experience-item p, .education-item p {
+      margin: 5px 0;
+      color: #555;
+    }
+    
+    /* News Section */
+    .news-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .news-item {
+      background: #f9f9f9;
+      padding: 20px;
+      width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .news-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .news-item h3 {
+      margin-top: 15px;
+      font-size: 1.5rem;
+    }
+    .news-item p {
+      margin: 10px 0;
+      color: #555;
+    }
+    .news-item a {
+      color: #333;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    
+    /* Contact Section */
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .contact input, .contact textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .contact button {
+      padding: 10px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-size: 1rem;
+    }
+    .contact button:hover {
+      background: #555;
+    }
+    
+    /* Footer with Social Icons */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #f7f7f7;
+    }
+    .social-icons {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: #333;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo"><a href="#">Baqui Billah</a></div>
+    <div class="menu">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header>
+    <h1>Md. Baqui Billah</h1>
+    <p>Telecom Sales & Business Leader</p>
+
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/baquibillah" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="Md. Baqui_Billah_Resume.pdf" target="_blank" title="Download CV">
+          <i class="fa-solid fa-file"></i>
+        </a>
+        <a href="mailto:baqui517@gmail.com" title="Email">
+          <i class="fa fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/15716681664" target="_blank" title="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about">
+      <div class="section-title">
+        <h2>About Me</h2>
+      </div>
+      <!-- Replace the image source with your personal photo -->
+      <img src="https://via.placeholder.com/150" alt="Your Photo" class="portfolio-img">
+      <p>I am a seasoned telecom sales leader with over 25 years of experience driving revenue growth and building high-performing teams. My focus is on digital transformation and strategic market expansion, and I thrive on turning innovative ideas into measurable business outcomes.</p>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <div class="experience">
+      <div class="section-title">
+        <h2>Experience</h2>
+      </div>
+      <div class="experience-item">
+        <h3>Head of Sales Planning and Distribution</h3>
+        <p><strong>Banglalink Digital Communications Limited</strong> | 2021 – 2025</p>
+        <p>Oversaw sales strategy, digital transformation, and market expansion initiatives.</p>
+      </div>
+      <div class="experience-item">
+        <h3>Head of SME</h3>
+        <p><strong>Banglalink Digital Communications Limited</strong> | 2017 – 2021</p>
+        <p>Led strategic planning and operational improvements for the SME business unit.</p>
+      </div>
+      <div class="experience-item">
+        <h3>General Manager, Regional Head</h3>
+        <p><strong>Grameenphone Limited</strong> | 2010 – 2014</p>
+        <p>Managed regional sales and distribution operations with a focus on customer experience.</p>
+      </div>
+      <!-- Additional positions can be added as needed -->
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <div class="education">
+      <div class="section-title">
+        <h2>Education</h2>
+      </div>
+      <div class="education-item">
+        <h3>Doctor of Business Administration (On-going)</h3>
+        <p><strong>University of Fairfax</strong></p>
+      </div>
+      <div class="education-item">
+        <h3>Masters of Business Administration</h3>
+        <p><strong>Asian University of Bangladesh</strong></p>
+      </div>
+      <div class="education-item">
+        <h3>Bachelor of Social Science (HONS)</h3>
+        <p><strong>Dhaka University</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent News Section -->
+  <section id="news">
+    <div class="news">
+      <div class="section-title">
+        <h2>Recent News</h2>
+      </div>
+      <div class="news-container">
+        <!-- Example News Item 1 -->
+        <div class="news-item">
+          <img src="https://source.unsplash.com/300x200/?news" alt="News Image">
+          <h3>Telecom Leader Named Industry Influencer</h3>
+          <p>Featured in a recent article discussing innovative digital transformations in telecom sales.</p>
+          <a href="#" target="_blank">Read More</a>
+        </div>
+        <!-- Example News Item 2 -->
+        <div class="news-item">
+          <img src="https://source.unsplash.com/300x200/?business" alt="News Image">
+          <h3>Interview on Digital Innovation</h3>
+          <p>An in-depth interview covering strategies for market expansion and digital sales automation.</p>
+          <a href="#" target="_blank">Read More</a>
+        </div>
+        <!-- Add more news items as required -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact">
+      <div class="section-title">
+        <h2>Contact</h2>
+      </div>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer with Social Icons -->
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/baquibillah" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="Md. Baqui_Billah_Resume.pdf" target="_blank" title="Download CV">
+        <i class="fa-solid fa-file"></i>
+      </a>
+      <a href="mailto:baqui517@gmail.com" title="Email">
+        <i class="fa fa-envelope"></i>
+      </a>
+      <a href="https://wa.me/15716681664" target="_blank" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+    <p>&copy; 2025 Md. Baqui Billah. All rights reserved.</p>
+  </footer>
+</body>
+</html>
