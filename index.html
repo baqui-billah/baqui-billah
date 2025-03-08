@@ -30,33 +30,63 @@
       left: 0;
       width: 100%;
       background: rgba(255, 255, 255, 0.9);
-      padding: 10px;
+      padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       z-index: 1000;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    nav .menu {
-        margin: 0 20px;
+    nav .logo a {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
     }
-    nav .menu a {
-      margin: 0px 5px;
+    /* Hamburger Icon (hidden on desktop) */
+    nav .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    /* Menu Items */
+    nav .menu {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    nav .menu li {
+      margin: 0 10px;
+    }
+    nav .menu li a {
       font-weight: 500;
       transition: color 0.3s;
     }
-    nav .menu a:hover {
+    nav .menu li a:hover {
       color: #555;
-      text-shadow: rgb(26, 58, 90) 1px 1px 1px;
+      text-shadow: 1px 1px 1px rgb(26, 58, 90);
     }
-    .portfolio-img {
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #fff;
-      margin: 20px auto;
-      display: block;
+    /* Media Query for Mobile */
+    @media (max-width: 768px) {
+      nav .hamburger {
+        display: block;
+      }
+      nav .menu {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        display: none;
+      }
+      nav .menu.active {
+        display: block;
+      }
+      nav .menu li {
+        margin: 10px 0;
+        text-align: center;
+      }
     }
     /* Header Hero Section */
     header {
@@ -250,13 +280,16 @@
   <!-- Navigation -->
   <nav>
     <div class="logo"><a href="#">Baqui Billah</a></div>
-    <div class="menu">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
     </div>
+    <ul class="menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
 
   <!-- Hero Section -->
@@ -414,5 +447,14 @@
     </div>
     <p>&copy; 2025 Md. Baqui Billah. All rights reserved.</p>
   </footer>
+  
+  <!-- JavaScript for toggling mobile menu -->
+  <script>
+    function toggleMenu() {
+      var menu = document.querySelector('nav .menu');
+      menu.classList.toggle('active');
+    }
+  </script>
 </body>
+
 </html>
