@@ -30,22 +30,34 @@
       left: 0;
       width: 100%;
       background: rgba(255, 255, 255, 0.9);
-      padding: 10px 20px;
+      padding: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       z-index: 1000;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
+    nav .menu {
+        margin: 0 20px;
+    }
     nav .menu a {
-      margin: 0 15px;
+      margin: 0px 5px;
       font-weight: 500;
       transition: color 0.3s;
     }
     nav .menu a:hover {
       color: #555;
+      text-shadow: rgb(26, 58, 90) 1px 1px 1px;
     }
-    
+    .portfolio-img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      margin: 20px auto;
+      display: block;
+    }
     /* Header Hero Section */
     header {
       position: relative;
@@ -59,14 +71,14 @@
       color: #fff;
     }
     header::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 1;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(26, 58, 90, 0.6); /* Change RGBA values to adjust color and opacity */
+        z-index: 1;
     }
     header h1, header p {
       position: relative;
@@ -96,7 +108,20 @@
     .header-social-icons a:hover {
       color: #ddd;
     }
-    
+    .header-photo-container {
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 2;
+    }
+    .header-photo {
+    width: 100%;
+    height: auto;
+    }
     /* Section Styles */
     section {
       padding: 60px 20px;
@@ -112,15 +137,7 @@
       margin: 0 auto;
       text-align: center;
     }
-    .portfolio-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #fff;
-      margin: 20px auto;
-      display: block;
-    }
+    
     
     /* Experience & Education Sections */
     .experience-item, .education-item {
@@ -231,6 +248,9 @@
 
   <!-- Hero Section -->
   <header>
+    <div class="header-photo-container">
+        <img src="assets/dp.jpeg" alt="Your Photo" class="header-photo">
+      </div>
     <h1>Md. Baqui Billah</h1>
     <p>Telecom Sales & Business Leader</p>
     <!-- Header Social Icons -->
@@ -238,7 +258,7 @@
       <a href="https://www.linkedin.com/in/baquibillah" target="_blank" title="LinkedIn">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="files/Md. Baqui_Billah_Resume.pdf" target="_blank" title="Download CV">
+      <a href="files/MdBaqui_Billah_Resume.pdf" target="_blank" title="Download CV">
         <i class="fa-solid fa-file"></i>
       </a>
       <a href="mailto:baqui517@gmail.com" title="Email">
@@ -249,7 +269,7 @@
       </a>
     </div>
   </header>
-
+  
   <!-- About Section -->
   <section id="about">
     <div class="about">
@@ -257,7 +277,6 @@
         <h2>About Me</h2>
       </div>
       <!-- Replace the image source with your personal photo -->
-      <img src="https://via.placeholder.com/150" alt="Your Photo" class="portfolio-img">
       <p>I am a seasoned telecom sales leader with over 25 years of experience driving revenue growth and building high-performing teams. My focus is on digital transformation and strategic market expansion, and I thrive on turning innovative ideas into measurable business outcomes.</p>
     </div>
   </section>
@@ -353,7 +372,7 @@
       <a href="https://www.linkedin.com/in/baquibillah" target="_blank" title="LinkedIn">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="files/Md. Baqui_Billah_Resume.pdf" target="_blank" title="Download CV">
+      <a href="files/MdBaqui_Billah_Resume.pdf" target="_blank" title="Download CV">
         <i class="fa-solid fa-file"></i>
       </a>
       <a href="mailto:baqui517@gmail.com" title="Email">
