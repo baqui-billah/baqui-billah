@@ -77,16 +77,17 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(26, 58, 90, 0.6); /* Change RGBA values to adjust color and opacity */
+        background: rgba(44, 78, 113, 0.6); /* Change RGBA values to adjust color and opacity */
         z-index: 1;
     }
     header h1, header p {
+    margin: 0;
       position: relative;
       z-index: 2;
     }
     header h1 {
       font-size: 3rem;
-      margin-bottom: 0.5em;
+
     }
     header p {
       font-size: 1.2rem;
@@ -109,6 +110,8 @@
       color: #ddd;
     }
     .header-photo-container {
+    margin-top: 50px;
+    margin-bottom: 20px;
     top: 20px;
     left: 20px;
     width: 200px;
@@ -124,7 +127,7 @@
     }
     /* Section Styles */
     section {
-      padding: 60px 20px;
+      padding: 20px 20px;
     }
     .section-title {
       text-align: center;
@@ -137,18 +140,28 @@
       margin: 0 auto;
       text-align: center;
     }
-    
-    
+
     /* Experience & Education Sections */
-    .experience-item, .education-item {
-      margin-bottom: 30px;
+    .experience-item, .education-container {
+      padding: 20px;
+      margin: 0 auto;
+      max-width: 600px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      background-color: rgba(197, 207, 232, 0.132);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
+    .education-item {
+        margin-bottom: 20px;
+    }
+    
     .experience-item h3, .education-item h3 {
       margin: 0;
       font-size: 1.4rem;
     }
     .experience-item p, .education-item p {
       margin: 5px 0;
+      margin-left: 15px;
       color: #555;
     }
     
@@ -160,7 +173,7 @@
       justify-content: center;
     }
     .news-item {
-      background: #f9f9f9;
+      background: rgba(197, 207, 232, 0.132);
       padding: 20px;
       width: 300px;
       border-radius: 8px;
@@ -298,9 +311,19 @@
         <p>Led strategic planning and operational improvements for the SME business unit.</p>
       </div>
       <div class="experience-item">
+        <h3>Head of Business Sales, Enterprise Business</h3>
+        <p><strong>Grameenphone Limited</strong> | 2014 – 2017</p>
+        <p></p>
+      </div>
+      <div class="experience-item">
         <h3>General Manager, Regional Head</h3>
         <p><strong>Grameenphone Limited</strong> | 2010 – 2014</p>
         <p>Managed regional sales and distribution operations with a focus on customer experience.</p>
+      </div>
+      <div class="experience-item">
+        <h3>Deputy GeneralManager, Head ofSSIM</h3>
+        <p><strong>Grameenphone Limited</strong> | 1999 – 2010</p>
+        <p></p>
       </div>
     </div>
   </section>
@@ -311,18 +334,25 @@
       <div class="section-title">
         <h2>Education</h2>
       </div>
-      <div class="education-item">
-        <h3>Doctor of Business Administration (On-going)</h3>
-        <p><strong>University of Fairfax</strong></p>
+      <div class="education-container">
+        <div class="education-item">
+            <h3>Doctor of Business Administration</h3>
+            <p><strong>University of Fairfax</strong> | 2025 - Present</p>
+          </div>
+          <div class="education-item">
+            <h3>Masters of Business Administration</h3>
+            <p><strong>Asian University of Bangladesh</strong> | 1999 - 2003</p>
+          </div>
+          <div class="education-item">
+            <h3>Masters of Social Science</h3>
+            <p><strong>Dhaka University</strong> | 1997 - 1999</p>
+          </div>
+          <div class="education-item">
+            <h3>Bachelor of Social Science (HONS)</h3>
+            <p><strong>Dhaka University</strong> | 1994 - 1997</p>
+          </div>
       </div>
-      <div class="education-item">
-        <h3>Masters of Business Administration</h3>
-        <p><strong>Asian University of Bangladesh</strong></p>
-      </div>
-      <div class="education-item">
-        <h3>Bachelor of Social Science (HONS)</h3>
-        <p><strong>Dhaka University</strong></p>
-      </div>
+      
     </div>
   </section>
 
