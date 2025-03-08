@@ -46,7 +46,7 @@
       color: #555;
     }
     
-    /* Hero Section */
+    /* Header Hero Section */
     header {
       position: relative;
       background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
@@ -78,6 +78,23 @@
     }
     header p {
       font-size: 1.2rem;
+    }
+    /* Header Social Icons */
+    .header-social-icons {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+    .header-social-icons a {
+      margin: 0 10px;
+      color: #fff;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+    .header-social-icons a:hover {
+      color: #ddd;
     }
     
     /* Section Styles */
@@ -185,17 +202,16 @@
       padding: 20px;
       background: #f7f7f7;
     }
-    .social-icons {
-      text-align: center;
+    .footer .social-icons {
       margin-bottom: 10px;
     }
-    .social-icons a {
+    .footer .social-icons a {
       margin: 0 10px;
       color: #333;
       font-size: 1.5rem;
       transition: color 0.3s;
     }
-    .social-icons a:hover {
+    .footer .social-icons a:hover {
       color: #555;
     }
   </style>
@@ -217,21 +233,21 @@
   <header>
     <h1>Md. Baqui Billah</h1>
     <p>Telecom Sales & Business Leader</p>
-
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/baquibillah" target="_blank" title="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="files/Md. Baqui_Billah_Resume.pdf" target="_blank" title="Download CV">
-          <i class="fa-solid fa-file"></i>
-        </a>
-        <a href="mailto:baqui517@gmail.com" title="Email">
-          <i class="fa fa-envelope"></i>
-        </a>
-        <a href="https://wa.me/8801962424501" target="_blank" title="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </div>
+    <!-- Header Social Icons -->
+    <div class="header-social-icons">
+      <a href="https://www.linkedin.com/in/baquibillah" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="files/Md. Baqui_Billah_Resume.pdf" target="_blank" title="Download CV">
+        <i class="fa-solid fa-file"></i>
+      </a>
+      <a href="mailto:baqui517@gmail.com" title="Email">
+        <i class="fa fa-envelope"></i>
+      </a>
+      <a href="https://wa.me/8801962424501" target="_blank" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
   </header>
 
   <!-- About Section -->
@@ -267,7 +283,6 @@
         <p><strong>Grameenphone Limited</strong> | 2010 – 2014</p>
         <p>Managed regional sales and distribution operations with a focus on customer experience.</p>
       </div>
-      <!-- Additional positions can be added as needed -->
     </div>
   </section>
 
@@ -313,7 +328,6 @@
           <p>An in-depth interview covering strategies for market expansion and digital sales automation.</p>
           <a href="#" target="_blank">Read More</a>
         </div>
-        <!-- Add more news items as required -->
       </div>
     </div>
   </section>
@@ -336,19 +350,19 @@
   <!-- Footer with Social Icons -->
   <footer class="footer">
     <div class="social-icons">
-        <a href="https://www.linkedin.com/in/baquibillah" target="_blank" title="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="files/Md. Baqui_Billah_Resume.pdf" target="_blank" title="Download CV">
-          <i class="fa-solid fa-file"></i>
-        </a>
-        <a href="mailto:baqui517@gmail.com" title="Email">
-          <i class="fa fa-envelope"></i>
-        </a>
-        <a href="https://wa.me/8801962424501" target="_blank" title="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </div>
+      <a href="https://www.linkedin.com/in/baquibillah" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="files/Md. Baqui_Billah_Resume.pdf" target="_blank" title="Download CV">
+        <i class="fa-solid fa-file"></i>
+      </a>
+      <a href="mailto:baqui517@gmail.com" title="Email">
+        <i class="fa fa-envelope"></i>
+      </a>
+      <a href="https://wa.me/8801962424501" target="_blank" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
     <p>&copy; 2025 Md. Baqui Billah. All rights reserved.</p>
   </footer>
 </body>
